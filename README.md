@@ -4,7 +4,7 @@ A comprehensive web application for managing military assets, inventory, and con
 
 ##  Live Deployment
 
-[** Live Demo Link**](military-inventory-g6uc6rdkr-soumya-rouls-projects.vercel.app) 
+[** Live Demo Link**](https://military-inventory-1dnnc7r5u-soumya-rouls-projects.vercel.app) 
 
 ##  Project Overview
 
