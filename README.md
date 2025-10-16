@@ -93,6 +93,12 @@ This system provides a centralized platform for military personnel to manage ass
 - react@19.2.0 
 - react-router-dom@7.9.4
 
+# Database Schema
+
+![Database Schema](https://raw.githubusercontent.com/soumya1925/military_inventory/master/supabase-schema-yixhgrlhdgeekvbozzjm%20(1).svg)
+
+## Database Overview
+This diagram shows the relationships between all tables in our Supabase PostgreSQL database.
 
 ### Installation
 
@@ -100,3 +106,5 @@ This system provides a centralized platform for military personnel to manage ass
    ```bash
    git clone https://github.com/your-username/military-asset-management.git
    cd military-asset-management
+
+
