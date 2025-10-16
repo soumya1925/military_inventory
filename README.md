@@ -4,9 +4,9 @@ A comprehensive web application for managing military assets, inventory, and con
 
 ##  Live Deployment
 
-[**👉 Live Demo Link**](https://military-inventory-g3hmiywjx-soumya-rouls-projects.vercel.app) 
+[** Live Demo Link**](https://military-inventory-g3hmiywjx-soumya-rouls-projects.vercel.app) 
 
-## 📋 Project Overview
+##  Project Overview
 
 This system provides a centralized platform for military personnel to manage assets, track inventory movements, and handle consignments between different military bases. Built with modern web technologies for reliability and security.
 
@@ -19,7 +19,7 @@ This system provides a centralized platform for military personnel to manage ass
 - Admin can view the purchase order made by a base commander and inject it into the inventory  for 
   inventory manipulation and current stock updates for a particular base
 
-### 🏢 Base Commander  
+###  Base Commander  
 - **Base-level oversight and command**
 - Monitor base inventory and stock levels
 - Can create and submit consignment making the purchase order
@@ -51,7 +51,7 @@ This system provides a centralized platform for military personnel to manage ass
 - Protected routes for different user levels
 - Session management with Supabase Auth
 
-### 🏭 Base Management
+###  Base Management
 - Create and manage military bases
 - Base information (name, code, location)
 - Multi-base inventory tracking
@@ -71,7 +71,7 @@ This system provides a centralized platform for military personnel to manage ass
 ###  Real-time Calculations
 - Automatic net movement calculations
 - Current stock = Stock + Net Movement
-- Live inventory updates with delay synchronization
+- Live inventory updates with delayed synchronization
 
 ## Demo Credentials
 
