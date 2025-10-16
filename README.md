@@ -1,75 +1,102 @@
-# React + TypeScript + Vite
+#  Military Asset Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive web application for managing military assets, inventory, and consignments across multiple bases with role-based access control.
 
-Currently, two official plugins are available:
+##  Live Deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[**👉 Live Demo Link**](https://military-inventory-g3hmiywjx-soumya-rouls-projects.vercel.app) 
 
-## React Compiler
+## 📋 Project Overview
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+This system provides a centralized platform for military personnel to manage assets, track inventory movements, and handle consignments between different military bases. Built with modern web technologies for reliability and security.
 
-Note: This will impact Vite dev & build performances.
+##  User Roles & Features
 
-## Expanding the ESLint configuration
+###  System Admin
+- **Full system access and user management**
+- Create and manage military bases
+- View all users, inventory, and consignments
+- Admin can view the purchase order made by a base commander and inject it into the inventory  for 
+  inventory manipulation and current stock updates for a particular base
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🏢 Base Commander  
+- **Base-level oversight and command**
+- Monitor base inventory and stock levels
+- Can create and submit consignment making the purchase order
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+###  Logistics Officer
+- **Inventory and consignment management**(Read-only)
+- Can check consignment data
+- Can check inventory data 
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+###  Military Personnel
+- **Asset utilization and basic operations**(Read-Only)
+- Can have acess to basic information
+- Can see the base , personnel belongs to name . location and base code
+- Can see the inventory details stock model and category
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+##  Technology Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Frontend**: React 18, TypeScript, Tailwind CSS
+- **Backend**: Supabase (PostgreSQL + Auth)
+- **Routing**: React Router DOM
+- **Forms**: React Hook Form
+- **Deployment**: Vercel/Netlify
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+##  Key Features
+
+###  Authentication & Authorization
+- Secure role-based login system
+- Protected routes for different user levels
+- Session management with Supabase Auth
+
+### 🏭 Base Management
+- Create and manage military bases
+- Base information (name, code, location)
+- Multi-base inventory tracking
+
+### Inventory System
+- Real-time stock tracking
+- Transfer management (in/out)
+- Automated current stock calculations
+- Category and model-based organization
+
+###  Consignment Management
+- Inter-base transfer tickets
+- Purchase order tracking
+- Delivery status updates (assigned, delivered, expired, damaged)
+- Automated inventory updates on delivery
+
+###  Real-time Calculations
+- Automatic net movement calculations
+- Current stock = Stock + Net Movement
+- Live inventory updates with delay synchronization
+
+## Demo Credentials
+
+| Role | Email | Password | Name |
+|------|-------|----------|------|
+| System Admin | `sysadmin1@defensehq.mil` | `admin` | System Administrator |
+| Base Commander | `e.johansen@baseironclad.mil` | `hashed_pw` | Erik Johansen |
+| Military Personnel | `l.park@campsentinel.mil` | `hashed_pw` | Lisa Park |
+| Logistics Officer | `o.saleh@outpostfalcon.mil` | `hashed_pw` | Omar Saleh |
+
+##  Quick Start
+
+### Prerequisites
+- Node.js 16+
+- Supabase account
+-tailwind css
+- react-dom@19.2.0
+-react-hook-form@7.65.0
+- react@19.2.0 
+- react-router-dom@7.9.4
+
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/military-asset-management.git
+   cd military-asset-management
